@@ -21,10 +21,11 @@ Additional hardening in `php-hardening.ini`:
 
 ```
 $ docker build -t wondercms .
-$ docker build --build-arg WONDERCMS_VERSION=3.6.0 --build-arg PHP_VERSION=8.4.27 -t wondercms .
+$ docker build --build-arg WONDERCMS_VERSION=3.6.0 -t wondercms .
 ```
 
-Do not set `PHP_VERSION` below 8.4.27 (or 8.2.35 / 8.3.36 / 8.5.12 on other branches).
+The PHP base image is a literal `FROM` tag on purpose. When bumping it, do not go
+below 8.4.27 (or 8.2.35 / 8.3.36 / 8.5.12 on other branches).
 
 ## How to use this image
 

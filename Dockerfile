@@ -1,8 +1,7 @@
 # PHP >= 8.4.27 is required: earlier releases are vulnerable to
 # PHP2Shell (CVE-2026-109618, CVE-2026-109619), unauthenticated RCE in the
 # PHP engine's request initialisation. Do not downgrade below the fixed release.
-ARG PHP_VERSION=8.4.27
-FROM php:${PHP_VERSION}-apache
+FROM php:8.4.27-apache
 ENV DEBIAN_FRONTEND=noninteractive
 ARG WONDERCMS_VERSION=3.6.0
 WORKDIR /var/www/html
